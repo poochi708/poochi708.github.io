@@ -1,15 +1,15 @@
 /*-- Use For Custom Styling --*/
 .bg-color-body {
-  background-color: #bbff33;
+  background-color: #DFDBE4;
 }
 
 .bottom-footer {
-  background-color: aquamarine
+  background-color: #DFDBE4;
 }
 .desc-div {
     height: 100px;
     width: 500px;
-    font-size: 25px; 
+    font-size: 15px; 
     text-align:center;
     float:left;
     position:relative;

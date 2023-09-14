@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 h1 {
-    font-size: 72px;
+    font-size: 80px;
 }
 .h1 {
     font-size: 4rem;
@@ -99,7 +99,7 @@ h2 {
 p {
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 20px;
     color: #535353;
 }
 .line-height-heading {
@@ -1352,7 +1352,7 @@ header .fixed-menu.navbar-top-default .header-social a:hover {
     position: fixed;
     right: 0;
     top: 0;
-    background: #bbff33;
+    background: #2B1B4C;
     z-index: 1032;
     height: 100%;
     -webkit-transform: translate3d(100%, 0, 0);
@@ -1542,7 +1542,7 @@ header .fixed-menu.navbar-top-default .header-social a:hover {
 
 .social-icons-simple li.animated-wrap a:hover{
     background-color: transparent;
-    color: #ffffff;
+    color: #fff;
 }
 
 /* Side Nav Arrow */
@@ -4250,7 +4250,7 @@ ul.rounded li::before {
 ====================================== */
 
 footer.bg-black2 {
-    background: #f8f9fa;
+    background: #DFDBE4;
 }
 .footer-icons li {
     display: inline-block;
