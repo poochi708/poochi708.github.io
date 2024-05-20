@@ -22,3 +22,8 @@
 .div-video {
     position: absolute;
 }
+
+.bottom-image {
+  display: flex;
+  justify-content: center;
+}
