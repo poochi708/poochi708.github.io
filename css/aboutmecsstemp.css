@@ -19,7 +19,7 @@
   }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: space-between; /* Space between text and image */
     align-items: flex-start; /* Align items to the top */
-    margin-bottom: 100px; /*space b/t text and images at the bottom */
+    margin-bottom: 0px; /*space b/t text and images at the bottom */
   }
   
   .text {
@@ -50,6 +50,6 @@
   }
   
   .images-row img {
-    max-width: 100px;
-    margin: 0 5px 10px;
+    max-width: 250px;
+    margin: 0 40px 10px;
   }
