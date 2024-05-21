@@ -36,7 +36,7 @@
   }
   
   .image {
-    width: 30%; /* Set initial width of the image section */
+    width: 40%; /* Set initial width of the image section */
   }
   
   .image img {
@@ -51,5 +51,5 @@
   
   .images-row img {
     max-width: 250px;
-    margin: 0 40px 10px;
+    margin: 0 5px 10px;
   }
