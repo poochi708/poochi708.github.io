@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog Post - Shivani Balachandar</title>
+  <title>Localizing Crayon Shin-chan: Little Helper</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <link rel="stylesheet" href="css/aboutmecsstemp.css">
   <link rel="icon" href="images/logo_black-01.png">
@@ -22,7 +22,6 @@
       padding: 40px;
     }
 
-    /* Back button */
     .back-button {
       display: inline-flex;
       align-items: center;
@@ -32,11 +31,6 @@
       font-size: 16px;
       font-weight: 500;
       margin: 20px;
-      transition: color 0.2s ease;
-    }
-
-    .back-button:hover {
-      color: #0078ff;
     }
 
     .post-header {
@@ -55,83 +49,146 @@
       color: #777;
     }
 
-    .post-image {
-      width: 100%;
-      border-radius: 10px;
-      margin: 25px 0;
-    }
-
     .post-content p {
       line-height: 1.8;
       font-size: 16px;
       margin-bottom: 20px;
-      white-space: pre-wrap;
     }
 
     .post-content h2 {
       font-size: 24px;
-      margin-top: 30px;
+      margin-top: 50px;
       color: #444;
     }
 
-    .images-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .images-row img {
+    .pdf-container {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
       border-radius: 10px;
-      object-fit: cover;
-      max-width: 382px;
-      height: auto;
+      margin: 30px 0;
+      overflow: hidden;
     }
 
-    /* Spider animation sizing */
-    img[src*="spider.gif"] {
-      display: block;
-      margin: 0 auto;
-      max-width: 250px;
-      max-height: 250px;
+    .process-item {
+      margin-top: 40px;
+    }
+
+    .process-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #666;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    .download {
+      margin-top: 60px;
+      padding: 25px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .download a {
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 2px solid #000;
     }
   </style>
 </head>
 
 <body>
-  <!-- Return Button -->
-  <a href="index.html" class="back-button">
-    &#8592; Back to Home
-  </a>
 
-  <div class="container">
-    <div class="post-header"> 
-      <h1>What I did before attending the Institute</h1>
-      <p class="post-meta">By Shivani Balachandar • October 18, 2025</p>
-    </div>
+<a href="index.html" class="back-button">
+  &#8592; Back to Home
+</a>
 
-    <img src="images/spider.gif" alt="Spider Animation">
+<div class="container">
 
-    <div class="post-content">
-      <p>At seventeen, I found myself on a packed bus in Brest, France, talking to the other <em>stagiaires</em> about our career dreams. Most of them were aiming for international studies. When I said I wanted to be a game designer, I got a few surprised looks. For the first time, I began to question how my years of studying languages could fit into that plan.</p>
-
-      <p>That question followed me for a while, until I volunteered at the Game Developers Conference. It was there I met professionals from across the industry, including someone in game localization who introduced me to an alum of the Middlebury Institute of International Studies. Learning about localization as the bridge between language and game development felt like everything suddenly clicked into place.</p>
-
-      <p>During my time working on semester-long game projects, I gravitated toward production and project management, roles that taught me how to collaborate across disciplines. That experience led to a full-time position as a project coordinator at a data technology company. I honed my organizational and communication skills and explored industries like IT and healthcare, but I still missed working with languages and culture. That’s when localization began calling to me again.</p>
-
-      <p>To build my skills, I started freelancing as a French and Korean translator, but I realized there was much more to learn about the technical side of localization. MIIS stood out as the perfect place to bridge that gap: a program combining technology, management, and language education with hands-on training in areas like vendor management and CAT tools. </p>
-
-      <p>My ultimate goal is to work as a localization producer in the video game industry—ensuring players around the world can <strong>experience games in ways that feel natural and authentic in their own languages and cultures.</strong> I believe localization is just as essential to immersion as storytelling or gameplay. At MIIS, I hope to deepen my understanding of the field and contribute to communities like Women in Localization, all while developing projects that bring games closer to players everywhere.</p>
-
-      <p>Looking back, I see a clear throughline from that bus ride in Brest to today: a love for language, culture, and play. Attending MIIS feels like the next step in uniting all of those passions into one meaningful career.</p>
-      <p><strong>Be sure to check out my <a href="index.html">past projects!</strong></a></p>
-    </div>
-
-    <div class="images-row">
-      <img src="images/brest.png" alt="Me in Brittany, France">
-      <img src="images/uscgamesexpo.png" alt="Bomb Buddies at USC Games Expo">
-    </div>
+  <!-- HEADER -->
+  <div class="post-header">
+    <h1>Translation Technology Final Project</h1>
+    <h2>Localizing <em>Crayon Shin-chan: Little Helper</em></h2>
+    <p class="post-meta">By Shivani Balachandar • December 14, 2025</p>
   </div>
+
+  <!-- INTRO -->
+  <div class="post-content">
+    <p>
+      When a game is designed for children, language is more than just text—it’s access.
+      For this project, I localized the mobile game <em>Crayon Shin-chan: Little Helper</em>
+      with the goal of ensuring that players across regions could engage with the game
+      naturally, intuitively, and joyfully in their own language.
+    </p>
+
+    <p>
+      The project involved translating all user-facing content from English into
+      <strong>Korean, French, and Traditional Chinese</strong>, using
+      <strong>Trados Studio</strong> as the backbone of the technical and linguistic workflow.
+      From early preparation—file validation, segmentation rules, and translation memory setup—
+      to production and final QA, each phase was designed to reduce risk, maintain consistency,
+      and support high-quality multilingual output.
+    </p>
+
+    <p>
+      Below is a breakdown of the localization process, supported by examples from each phase,
+      as well as the full Statement of Work and a summary of lessons learned.
+    </p>
+
+    <!-- SOW PDF -->
+    <h2>Statement of Work</h2>
+    <div class="pdf-container">
+      <iframe src="images/SM2 x Neos Corporation Localization Proposal.pdf" width="100%" height="100%"></iframe>
+    </div>
+
+    <!-- PROCESS IMAGES -->
+    <h2>Localization Process Highlights</h2>
+
+    <div class="process-item">
+      <img src="images/Korean Pseudo.png" alt="Pseudo-translation example">
+      <div class="caption">Pseudo-translation used to validate segmentation, placeholders, and string expansion.</div>
+    </div>
+
+    <div class="process-item">
+      <img src="images/French Strings.png" alt="User-facing string translation">
+      <div class="caption">Translation of user-facing strings in Trados using TM matches, AutoSuggest, and concordance search.</div>
+    </div>
+
+    <div class="process-item">
+      <div class="dtp-row">
+        <img src="images/Chinese DTP.png" alt="DTP Korean asset">
+        <img src="images/Korean DTP Logo.png" alt="DTP French asset">
+        <img src="images/French DTP.png" alt="DTP Traditional Chinese asset">
+      </div>
+      <div class="caption">
+        DTP recreation of assets with embedded text across Korean, French, and Traditional Chinese.
+      </div>
+    </div>
+    
+    <div class="process-item">
+      <img src="images/glossary.png" alt="Localization glossary">
+      <div class="caption">Project glossary ensuring consistent terminology across all languages.</div>
+    </div>
+
+    <!-- DOWNLOAD -->
+    <div class="download">
+      <p>
+        <strong>Download:</strong><br>
+        <a href="images/SM2 x Neos Corporation Presentation.pdf" download>
+          Lessons Learned & Takeaways Presentation
+        </a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
