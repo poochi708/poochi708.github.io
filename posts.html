@@ -121,8 +121,43 @@
 
   <!-- INTRO -->
   <div class="post-content">
+    <h2>About the Translation Technology Course</h2>
+
+<p>
+  This project was completed as part of a <strong>Translation Technology</strong> course,
+  which focused on the tools, workflows, and technical decision-making that support
+  professional localization projects.
+</p>
+
+<p>
+  Throughout the course, I worked extensively with <strong>CAT tools</strong>, primarily
+  <strong>Trados Studio</strong>, while also gaining exposure to tools such as
+  <strong>MateCat</strong>, <strong>AntConc</strong>, and other corpus and QA utilities.
+  The course emphasized not only how to use these tools, but <em>why</em> and <em>when</em>
+  they are most effective within a localization pipeline.
+</p>
+
+<p>
+  Key areas of focus included building and managing
+  <strong>translation memories</strong>, <strong>glossaries</strong>,
+  <strong>termbases</strong>, and <strong>style guides</strong>, as well as preparing
+  accurate <strong>quotes</strong> and Statements of Work based on scope, volume,
+  and technical complexity.
+</p>
+
+<p>
+  We also explored the evolving role of <strong>machine translation and AI</strong>
+  in the industry—examining when MT can improve efficiency, when human expertise is
+  essential, and how post-editing and QA practices help maintain quality and consistency.
+</p>
+
+<p>
+  This final project applies those concepts in a real-world scenario, demonstrating how
+  translation technology, linguistic expertise, and project planning come together in
+  a structured localization workflow.
+</p>
+
     <p>
-      When a game is designed for children, language is more than just text—it’s access.
       For this project, I localized the mobile game <em>Crayon Shin-chan: Little Helper</em>
       with the goal of ensuring that players across regions could engage with the game
       naturally, intuitively, and joyfully in their own language.
@@ -158,7 +193,7 @@
 
     <div class="process-item">
       <img src="images/French Strings.png" alt="User-facing string translation">
-      <div class="caption">Translation of user-facing strings in Trados using TM matches, AutoSuggest, and concordance search.</div>
+      <div class="caption">Translation of user-facing strings in Trados using TM matches, QA checks, and concordance search. LQA was conducted for all locales. </div>
     </div>
 
     <div class="process-item">
@@ -178,14 +213,71 @@
     </div>
 
     <!-- DOWNLOAD -->
-    <div class="download">
-      <p>
-        <strong>Download:</strong><br>
-        <a href="images/SM2 x Neos Corporation Presentation.pdf" download>
-          Lessons Learned & Takeaways Presentation
-        </a>
-      </p>
-    </div>
+   <img src="images/SM2 x Neos Corporation Presentation.pdf" alt="Takeaways Presentation">target="_blank">
+  Lessons Learned & Takeaways Presentation
+</a>
+<h2>Tips & Tricks: Using Regex in Localization</h2>
+
+<div class="regex-callout">
+  <h3>Using Regex to Improve Linguistic Quality at Scale</h3>
+
+  <p>
+    One of the most valuable technical skills I applied during this project was the use of
+    <strong>regular expressions (regex)</strong> to perform targeted linguistic checks across
+    a large volume of user-facing strings. Regex allowed me to efficiently identify
+    inconsistencies that would be difficult to catch manually.
+  </p>
+
+  <p>
+    Below is a reference document showcasing how I have used regex in previous coursework
+    to solve localization challenges.
+  </p>
+
+  <div class="pdf-container">
+    <iframe src="images/ShivaniBalachandar_Regex.pdf" width="100%" height="100%"></iframe>
+  </div>
+
+  <p>
+    In this project, regex was especially useful in my role as the <strong>French linguist</strong>,
+    where typographic conventions and register play a critical role in perceived quality.
+  </p>
+
+  <h4>Practical Regex Examples</h4>
+
+  <p><strong>1. Enforcing insecable (non-breaking) spaces before punctuation</strong></p>
+  <div class="regex-example">
+    ([^\s\u00A0])([!?])
+  </div>
+  <p>
+    Used to identify cases where <code>!</code> or <code>?</code> were missing the required
+    non-breaking space in French (e.g., <em>Bonjour!</em> → <em>Bonjour&nbsp;!</em>).
+  </p>
+
+  <p><strong>2. Checking for unintended informal phrasing</strong></p>
+  <div class="regex-example">
+    \b(tu|toi|ton|ta|tes)\b
+  </div>
+  <p>
+    Used to scan for informal second-person pronouns to ensure consistent use of
+    the intended register across instructional UI strings.
+  </p>
+
+  <p><strong>3. Identifying inconsistent punctuation patterns</strong></p>
+  <div class="regex-example">
+    \s{2,}|[!?]{2,}
+  </div>
+  <p>
+    Used to flag double spaces or repeated punctuation that can easily slip into
+    short UI strings during editing.
+  </p>
+
+  <p>
+    By combining regex searches with Trados Studio’s QA Checker and concordance search,
+    I was able to validate French typographic rules, enforce stylistic consistency,
+    and significantly reduce review time. This reinforced how technical tools and
+    linguistic expertise work best when used together in a modern localization workflow.
+  </p>
+</div>
 
   </div>
 </div>

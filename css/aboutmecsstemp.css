@@ -70,3 +70,33 @@
     max-width: 250px;
     margin: 0 5px 10px;
   }
+.regex-callout {
+  background: #f8f6fb;
+  border-left: 6px solid #6b5cff;
+  padding: 25px 30px;
+  margin: 40px 0;
+  border-radius: 10px;
+}
+
+.regex-callout h3 {
+  margin-top: 0;
+  color: #2c2c2c;
+  font-size: 20px;
+}
+
+.regex-callout code {
+  background: #eceaf3;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.regex-example {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  font-family: monospace;
+  font-size: 14px;
+}
