@@ -5,12 +5,44 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="icon" href="images/dice_icon.png">
+    <style>
+      body {
+        background-color: #F5F3F7;
+        font-family: 'Poppins', sans-serif;
+        color: #2E2E2E;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .desc-div {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .media-block {
+        margin: 20px 0;
+      }
+      .bottom-images {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 40px 0;
+        flex-wrap: wrap;
+      }
+      .bottom-images img {
+        width: 400px;
+      }
+    </style>
   </head>
-  <body style="background-color:#F5F3F7; font-family:'Poppins', sans-serif; color:#2E2E2E;">
-
+  <body>
     <div class="container">
       <!-- Hero Section -->
-      <div class="hero" style="text-align:center; padding:20px;">
+      <div class="hero">
         <img src="images/tgcf.png" alt="Eclipsed Truth Cover Art" height="400">
         <img src="images/tgcf_zh.png" alt="Chinese Eclipsed Truth Cover Art" height="400">
         <p><em>Background Source: Tian Guan Ci Fu Official Audio Drama</em></p>
@@ -19,103 +51,104 @@
       </div>
 
       <!-- Description -->
-      <div class="desc-div" style="max-width:900px; margin:auto; padding:20px;">
-        
+      <div class="desc-div">
         <h2>Overview</h2>
         <p>
-          <strong>Eclipsed Truth Rattles in the Cup</strong> is a digital adaptation of the classic liar’s dice game, designed and developed from scratch in Unreal Engine. 
-          Inspired by <em>Tian Guan Ci Fu</em> (known in English as <em>Heaven’s Official Blessing</em>), the project blends bluffing mechanics with character‑driven dialogue to bring familiar personalities to life. 
-          Each player begins with five dice, hidden from their opponent. Players bid on the total dice count between both cups, bluffing or challenging as the tension rises. 
+          <strong>Eclipsed Truth Rattles in the Cup</strong> is a digital adaptation of the classic liar’s dice game, designed and developed from scratch in Unreal Engine.
+          Inspired by <em>Tian Guan Ci Fu</em> (known in English as <em>Heaven’s Official Blessing</em>), the project blends bluffing mechanics with character‑driven dialogue to bring familiar personalities to life.
+          Each player begins with five dice, hidden from their opponent. Players bid on the total dice count between both cups, bluffing or challenging as the tension rises.
           If a bluff is exposed, the liar loses a die. The match continues until one player runs out of dice — a deceptively simple premise that becomes a battle of wit, risk, and trust.
         </p>
 
         <!-- Gameplay Image -->
-        <div style="text-align:center; margin:20px 0;">
+        <div class="media-block">
           <img src="images/tgcf ss 1.png" alt="Dice Table Gameplay" width="500">
           <p><em>Gameplay snapshot: Player view.</em></p>
         </div>
 
         <h2>Gameplay Mechanics</h2>
+        <ul style="text-align:left; display:inline-block;">
+          <li>Each player rolls five dice, visible only to themselves.</li>
+          <li>Players bid on the combined total across both sets of dice.</li>
+          <li>Bids can be raised, bluffed, or challenged.</li>
+          <li>If a bluff is caught, the liar loses a die.</li>
+          <li>The game ends when one player has no dice left.</li>
+        </ul>
         <p>
-          The rules are faithful to liar’s dice tradition:
-          <ul>
-            <li>Each player rolls five dice, visible only to themselves.</li>
-            <li>Players bid on the combined total across both sets of dice.</li>
-            <li>Bids can be raised, bluffed, or challenged.</li>
-            <li>If a bluff is caught, the liar loses a die.</li>
-            <li>The game ends when one player has no dice left.</li>
-          </ul>
           This structure creates a tense rhythm of risk and reward, perfectly suited to the personalities of TGCF characters. Dialogue and voice lines reinforce the stakes, making every round feel like a narrative moment rather than just a mechanical exchange.
         </p>
 
         <!-- Gameplay Trailer Video -->
-        <div style="text-align:center; margin:20px 0;">
-          <iframe width="500" height="315" src="images/eclipsed dialogue.mp4"></iframe>
-          <p><em>Gameplay Snippet showing dialogue integration.</em></p>
+        <div class="media-block">
+          <video width="500" height="315" controls>
+            <source src="images/eclipsed dialogue.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p><em>Gameplay snippet showing dialogue integration.</em></p>
         </div>
 
         <h2>Workflow Reflection</h2>
         <p>
-          My initial concept leaned heavily into narrative storytelling, with elaborate cutscenes and branching dialogue. 
-          However, during prototyping I realized that the heart of the experience lay in the bluffing mechanics themselves. 
-          I shifted focus toward gameplay and dialogue integration, ensuring that character voices carried the narrative weight without slowing down the pace. 
+          My initial concept leaned heavily into narrative storytelling, with elaborate cutscenes and branching dialogue.
+          However, during prototyping I realized that the heart of the experience lay in the bluffing mechanics themselves.
+          I shifted focus toward gameplay and dialogue integration, ensuring that character voices carried the narrative weight without slowing down the pace.
           This pivot was challenging but ultimately optimized the design: players remain immersed in character interactions while still enjoying fast, strategic rounds.
         </p>
         <p>
-          Developing in Unreal Engine from scratch was a steep learning curve. I had to rebuild the gameflow and Blueprint systems multiple times, especially in regard to the NPC AI logic and dice spawning systems. 
-          Mistakes — like overcomplicating the bidding system — forced me to simplify and streamline, which improved both usability and pacing. 
+          Developing in Unreal Engine from scratch was a steep learning curve. I had to rebuild the gameflow and Blueprint systems multiple times, especially in regard to the NPC AI logic and dice spawning systems.
+          Mistakes — like overcomplicating the bidding system — forced me to simplify and streamline, which improved both usability and pacing.
           These surprises reinforced the importance of iteration: listening to feedback and trimming excess features made the game stronger.
         </p>
 
         <!-- Developer Diary Video -->
-        <div style="text-align:center; margin:20px 0;">
-          <iframe width="500" height="315" src="images/eclipsed gameplay.mp4"></iframe>
+        <div class="media-block">
+          <video width="500" height="315" controls>
+            <source src="images/eclipsed gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <p><em>Liar's Dice gameplay in Chinese.</em></p>
         </div>
 
         <h2>Localization Challenges</h2>
         <p>
-          Localization was considered from the very beginning. Because TGCF has a passionate global audience, we wanted the game to resonate across English, Japanese, and Chinese players. 
-          This shaped design decisions early on, including the title itself. Characters like Qi Rong demanded careful attention: his strong personality needed to be clear and consistent across all languages. 
-          Familiarity with the book was vital — certain idioms or cultural references required adaptation rather than direct translation. 
+          Localization was considered from the very beginning. Because TGCF has a passionate global audience, we wanted the game to resonate across English, Japanese, and Chinese players.
+          This shaped design decisions early on, including the title itself. Characters like Qi Rong demanded careful attention: his strong personality needed to be clear and consistent across all languages.
+          Familiarity with the book was vital — certain idioms or cultural references required adaptation rather than direct translation.
           By prioritizing localization early, we avoided costly rewrites later and ensured that the game’s emotional tone carried across cultures.
-
         </p>
 
         <!-- Localization Timeline Image -->
-        <div style="text-align:center; margin:20px 0;">
+        <div class="media-block">
           <img src="images/workflow.png" alt="Localization Timeline" width="500">
           <p><em>Localization workflow across three languages.</em></p>
         </div>
 
         <h2>Key Features</h2>
-        <p>
-          <ul>
-            <li>Authentic liar’s dice mechanics with bluffing, bidding, and challenges.</li>
-            <li>Dialogue and character interactions inspired by TGCF.</li>
-            <li>Localization in English, Japanese, and Chinese.</li>
-            <li>Stylized visuals and immersive audio design.</li>
-            <li>Iterative Blueprint systems built entirely in Unreal Engine.</li>
-            <li>NPC AI logic and gameplay that are true to the characters' personalities.</li>
-          </ul>
-        </p>
+        <ul style="text-align:left; display:inline-block;">
+          <li>Authentic liar’s dice mechanics with bluffing, bidding, and challenges.</li>
+          <li>Dialogue and character interactions inspired by TGCF.</li>
+          <li>Localization in English, Japanese, and Chinese.</li>
+          <li>Stylized visuals and immersive audio design.</li>
+          <li>Iterative Blueprint systems built entirely in Unreal Engine.</li>
+          <li>NPC AI logic and gameplay that are true to the characters' personalities.</li>
+        </ul>
 
         <h2>Conclusion</h2>
         <p>
-          <strong>Eclipsed Truth Rattles in the Cup</strong> represents persistence, iteration, and passion. 
-          By blending liar’s dice mechanics with TGCF‑inspired dialogue, and by embracing the challenges of localization, the project grew into something richer than its original concept. 
-          Every surprise, mistake, and recovery shaped the final product into a game that resonates across cultures. 
-
-           <!-- Bottom Image Section -->
-      <div style="display:flex; justify-content:center; gap:40px; margin:40px 0;">
-        <div>
-          <img src="images/jp eclipsed.png" alt="Extra Showcase Image 1" width="400">
-        </div>
-        <div>
-          <img src="images/eng eclipsed.png" alt="Extra Showcase Image 2" width="400">
-        </div>
-
+          <strong>Eclipsed Truth Rattles in the Cup</strong> represents persistence, iteration, and passion.
+          By blending liar’s dice mechanics with TGCF‑inspired dialogue, and by embracing the challenges of localization, the project grew into something richer than its original concept.
+          Every surprise, mistake, and recovery shaped the final product into a game that resonates across cultures.
         </p>
+
+        <!-- Bottom Image Section -->
+        <div class="bottom-images">
+          <div>
+            <img src="images/jp eclipsed.png" alt="Japanese Showcase Image">
+          </div>
+          <div>
+            <img src="images/eng eclipsed.png" alt="English Showcase Image">
+          </div>
+        </div>
       </div>
     </div>
   </body>
