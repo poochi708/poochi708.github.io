@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Localizing Crayon Shin-chan: Little Helper</title>
+  <title>Localization Projects</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-  <link rel="stylesheet" href="css/aboutmecsstemp.css">
   <link rel="icon" href="images/logo_black-01.png">
 
   <style>
@@ -74,6 +73,14 @@
       margin-top: 40px;
     }
 
+    /* Smaller images for Post 1 and Post 2 */
+    .post-img-small {
+      width: 60%;
+      display: block;
+      margin: 10px auto;
+      border-radius: 10px;
+    }
+
     .process-item img {
       width: 100%;
       border-radius: 10px;
@@ -101,6 +108,49 @@
       color: #000;
       border-bottom: 2px solid #000;
     }
+
+    /* Score table */
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .score-table th {
+      background: #4a4a6a;
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .score-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    .score-table tr:nth-child(even) td {
+      background: #f3f1f7;
+    }
+    .score-table .critical { color: #c0392b; font-weight: 600; }
+    .score-table .poor     { color: #e67e22; font-weight: 600; }
+    .score-table .accept   { color: #27ae60; font-weight: 600; }
+
+    .callout-box {
+      background: #f0edf5;
+      border-left: 4px solid #7b6fa0;
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .callout-box strong {
+      color: #4a3f6b;
+    }
+
+    hr.post-divider {
+      border: none;
+      border-top: 2px solid #c9c3d6;
+      margin: 70px 0 50px 0;
+    }
   </style>
 </head>
 
@@ -110,14 +160,11 @@
   &#8592; Back to Home
 </a>
 
-<!-- NEWER POSTS (WITH IMAGE + PPT SPACE) -->
-<!-- NEWER POSTS (WITH IMAGE + PPT SPACE) -->
-
-<!-- POST 1 -->
+<!-- ===================== POST 1 ===================== -->
 <div class="post-header">
   <h1>TMS Evaluation for Live-Service Game Localization</h1>
   <h2>Crowdin vs Phrase for DalcomSoft</h2>
-  <p class="post-meta">By Shivani Balachandar • May 2026</p>
+  <p class="post-meta">By Shivani Balachandar &bull; May 2026</p>
 </div>
 
 <div class="post-content">
@@ -132,14 +179,13 @@
     building a weighted scorecard, and comparing two leading TMS platforms: Crowdin and Phrase.
   </p>
 
-  <!-- IMAGE SPACE -->
   <div class="process-item">
-    <img src="images/tms_workflow_dalcomsoft.png" alt="Localization workflow for live-service games">
-    <div class="caption">End-to-end localization workflow: developer → TMS → translator → QA → live game updates.</div>
+    <img class="post-img-small" src="images/tms_workflow_dalcomsoft.png" alt="Localization workflow for live-service games">
+    <div class="caption">End-to-end localization workflow: developer &rarr; TMS &rarr; translator &rarr; QA &rarr; live game updates.</div>
   </div>
 
   <p>
-    DalcomSoft’s localization environment is fast-paced and continuous, requiring frequent updates for UI text,
+    DalcomSoft's localization environment is fast-paced and continuous, requiring frequent updates for UI text,
     events, notifications, and promotional content across multiple languages including Korean, English, Japanese, and Chinese.
   </p>
 
@@ -153,9 +199,8 @@
     developers, QA teams, marketing, executives, and end users.
   </p>
 
-  <!-- IMAGE SPACE -->
   <div class="process-item">
-    <img src="images/tms_scorecard.png" alt="TMS weighted scorecard comparison Crowdin vs Phrase">
+    <img class="post-img-small" src="images/tms_scorecard.png" alt="TMS weighted scorecard comparison Crowdin vs Phrase">
     <div class="caption">Weighted evaluation scorecard comparing Crowdin and Phrase across key business requirements.</div>
   </div>
 
@@ -170,7 +215,6 @@
     while Phrase demonstrated stronger enterprise-level orchestration and scalability features.
   </p>
 
-  <!-- PPT SPACE -->
   <h2>Presentation</h2>
   <div class="pdf-container">
     <iframe src="images/TMS_Evaluation_Presentation.pptx" width="100%" height="100%"></iframe>
@@ -184,90 +228,172 @@
 
 </div>
 
-<!-- POST 2 -->
+<hr class="post-divider">
+
+<!-- ===================== POST 2 (NEW) ===================== -->
 <div class="post-header">
-  <h1>Building a Localization QA Pipeline</h1>
-  <h2>From Strings to Shipping-Ready Content</h2>
-  <p class="post-meta">By Shivani Balachandar • February 15, 2026</p>
+  <h1>Training a Custom NMT Engine for K-pop Fan Discourse</h1>
+  <h2>Korean &rarr; English | Pann, Instiz, TheQoo</h2>
+  <p class="post-meta">By Shivani Balachandar &bull; April 2026</p>
 </div>
 
 <div class="post-content">
 
   <p>
-    This post breaks down how I structured a lightweight but effective QA pipeline for localization projects,
-    combining automated checks with manual review.
+    This project tackled one of the harder corners of machine translation: highly informal, slang-dense Korean
+    fan community text. Working as part of a four-person team (五夏 / 5SMR), we ran a pilot to estimate the
+    resources needed to train a customized Neural Machine Translation (NMT) engine for Korean-to-English
+    translation of forum-style K-pop content sourced from Pann, Instiz, and TheQoo.
   </p>
 
-  <!-- IMAGE SPACE -->
+  <p>
+    We used <strong>Microsoft Azure Translator</strong> as our NMT engine and completed <strong>6 rounds of
+    training</strong> with human post-editing and evaluation after each round. The full workflow &mdash; from data
+    collection and cleaning through iterative training and final analysis &mdash; is documented in the Statement of
+    Work and Lessons Learned presentation below.
+  </p>
+
   <div class="process-item">
-    <img src="images/qa_pipeline.png" alt="Localization QA pipeline diagram">
-    <div class="caption">QA pipeline combining regex checks, QA tools, and manual linguistic review.</div>
+    <img class="post-img-small" src="images/5smr_process.png" alt="5SMR NMT training process diagram">
+    <div class="caption">Four-phase workflow: file prep &rarr; MT training &rarr; assessment &rarr; delivery.</div>
   </div>
 
+  <h2>The Challenge: Domain Mismatch</h2>
+
   <p>
-    The workflow integrates <strong>Trados QA Checker</strong>, regex validation, and glossary enforcement
-    to catch issues early in the translation process.
+    K-pop fan discourse on Korean internet forums is typologically distinct from the formal or semi-formal text
+    that most commercial MT systems train on. The corpus was dense with fandom-specific compound terms
+    (e.g., <em>&#52628;&#45355;</em> &ldquo;stan attractor,&rdquo; <em>&#49324;&#49373;</em> &ldquo;sasaeng&rdquo;), Korean emoticons like &#12619;&#12619; and &#12610;&#12610;
+    with no direct English equivalents, deliberate code-switching between Korean and romanized names, and
+    a register that swings rapidly between affectionate hyperbole, irony, and in-jokes.
   </p>
 
-  <!-- PPT SPACE -->
-  <h2>Presentation</h2>
-  <div class="pdf-container">
-    <iframe src="images/QA_Pipeline_Presentation.pptx" width="100%" height="100%"></iframe>
+  <p>
+    Our baseline evaluation reflected this mismatch clearly. The MT output started at a <strong>critical</strong>
+    overall weighted score of 2.21/5.00, with post-editing effort scoring just 1.67 &mdash; meaning most segments
+    required near-complete rewriting rather than light editing.
+  </p>
+
+  <div class="callout-box">
+    <strong>Notable failure:</strong> The SEVENTEEN song title <em>&#50500;&#51452; NICE</em> (Aju Nice) was transcribed
+    by the baseline MT as an anatomical slur &mdash; a named entity hallucination that would be
+    actively harmful in any consumer-facing context, and a clear signal that the engine had never
+    encountered this content domain.
   </div>
 
+  <h2>Iterative Training Results</h2>
+
   <p>
-    The goal was to reduce downstream errors while keeping the review process efficient and scalable
-    across multiple languages.
+    Each round, we fed post-edited segments back into the training pipeline. The improvement was measurable
+    and consistent across all five iterations:
+  </p>
+
+  <table class="score-table">
+    <thead>
+      <tr>
+        <th>Iteration</th>
+        <th>Adequacy</th>
+        <th>Fluency</th>
+        <th>Tone Acc.</th>
+        <th>PE Effort</th>
+        <th>Weighted</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Baseline</td><td>2.94</td><td>2.54</td><td>2.17</td><td>1.67</td><td>2.21</td><td class="critical">CRITICAL</td></tr>
+      <tr><td>Round 1</td><td>3.31</td><td>2.91</td><td>2.44</td><td>2.21</td><td>2.69</td><td class="poor">POOR</td></tr>
+      <tr><td>Round 2</td><td>3.59</td><td>3.19</td><td>2.81</td><td>2.66</td><td>3.04</td><td class="accept">ACCEPTABLE</td></tr>
+      <tr><td>Round 3</td><td>3.79</td><td>3.39</td><td>3.09</td><td>3.03</td><td>3.31</td><td class="accept">ACCEPTABLE</td></tr>
+      <tr><td>Round 4</td><td>3.96</td><td>3.56</td><td>3.36</td><td>3.30</td><td>3.53</td><td class="accept">ACCEPTABLE</td></tr>
+      <tr><td>Round 5</td><td>4.06</td><td>3.66</td><td>3.56</td><td>3.50</td><td>3.69</td><td class="accept">ACCEPTABLE</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    The most dramatic gains came in the first two rounds, as the engine quickly absorbed corrected grammar
+    patterns, pronoun defaults, and basic slang handling. By Round 5, the majority of segments reached a
+    broad ACCEPTABLE&ndash;GOOD rating. Post-editing effort showed the steepest improvement over the full
+    cycle &mdash; validating the iterative PEMT strategy as a practical path forward for this domain.
+  </p>
+
+
+  <h2>Statement of Work &amp; Lessons Learned</h2>
+
+  <p>
+    The Statement of Work below captures the full project scope, updated timeline, and cost breakdown.
+    The Lessons Learned presentation covers what worked, what didn&rsquo;t, and how we&rsquo;d approach a
+    similar project differently.
+  </p>
+
+  <div class="pdf-container">
+    <iframe src="images/&#20116;&#22799;_5SMR_SoW.pdf" width="100%" height="100%"></iframe>
+  </div>
+
+  <div class="pdf-container">
+    <iframe src="images/&#20116;&#22799;_5SMR_Lessons_Learned.pptx" width="100%" height="100%"></iframe>
+  </div>
+
+  <h2>Key Takeaways</h2>
+
+  <p>
+    This project reinforced something important: domain-specific NMT is viable, but it requires realistic
+    scoping of data prep costs. For informal internet content, data collection and cleaning will almost
+    always take longer than expected. A dedicated glossary for fan terminology, collected upfront, would
+    meaningfully accelerate both training and post-editing. And for a domain where register and emotional
+    tone are as important as meaning, human evaluation weighted toward tone accuracy is essential &mdash;
+    BLEU scores alone don&rsquo;t tell the full story.
   </p>
 
 </div>
 
+<hr class="post-divider">
+
+<!-- ===================== POST 3 (original Crayon Shin-chan post, unchanged) ===================== -->
 <div class="container">
 
-  <!-- HEADER -->
   <div class="post-header">
     <h1>Translation Technology Final Project</h1>
     <h2>Localizing <em>Crayon Shin-chan: Little Helper</em></h2>
-    <p class="post-meta">By Shivani Balachandar • December 14, 2025</p>
+    <p class="post-meta">By Shivani Balachandar &bull; December 14, 2025</p>
   </div>
 
-  <!-- INTRO -->
   <div class="post-content">
     <h2>About the Translation Technology Course</h2>
 
-<p>
-  This project was completed as part of a <strong>Translation Technology</strong> course,
-  which focused on the tools, workflows, and technical decision-making that support
-  professional localization projects.
-</p>
+    <p>
+      This project was completed as part of a <strong>Translation Technology</strong> course,
+      which focused on the tools, workflows, and technical decision-making that support
+      professional localization projects.
+    </p>
 
-<p>
-  Throughout the course, I worked extensively with <strong>CAT tools</strong>, primarily
-  <strong>Trados Studio</strong>, while also gaining exposure to tools such as
-  <strong>MateCat</strong>, <strong>AntConc</strong>, and other corpus and QA utilities.
-  The course emphasized not only how to use these tools, but <em>why</em> and <em>when</em>
-  they are most effective within a localization pipeline.
-</p>
+    <p>
+      Throughout the course, I worked extensively with <strong>CAT tools</strong>, primarily
+      <strong>Trados Studio</strong>, while also gaining exposure to tools such as
+      <strong>MateCat</strong>, <strong>AntConc</strong>, and other corpus and QA utilities.
+      The course emphasized not only how to use these tools, but <em>why</em> and <em>when</em>
+      they are most effective within a localization pipeline.
+    </p>
 
-<p>
-  Key areas of focus included building and managing
-  <strong>translation memories</strong>, <strong>glossaries</strong>,
-  <strong>termbases</strong>, and <strong>style guides</strong>, as well as preparing
-  accurate <strong>quotes</strong> and Statements of Work based on scope, volume,
-  and technical complexity.
-</p>
+    <p>
+      Key areas of focus included building and managing
+      <strong>translation memories</strong>, <strong>glossaries</strong>,
+      <strong>termbases</strong>, and <strong>style guides</strong>, as well as preparing
+      accurate <strong>quotes</strong> and Statements of Work based on scope, volume,
+      and technical complexity.
+    </p>
 
-<p>
-  We also explored the evolving role of <strong>machine translation and AI</strong>
-  in the industry—examining when MT can improve efficiency, when human expertise is
-  essential, and how post-editing and QA practices help maintain quality and consistency.
-</p>
+    <p>
+      We also explored the evolving role of <strong>machine translation and AI</strong>
+      in the industry&mdash;examining when MT can improve efficiency, when human expertise is
+      essential, and how post-editing and QA practices help maintain quality and consistency.
+    </p>
 
-<p>
-  This final project applies those concepts in a real-world scenario, demonstrating how
-  translation technology, linguistic expertise, and project planning come together in
-  a structured localization workflow.
-</p>
+    <p>
+      This final project applies those concepts in a real-world scenario, demonstrating how
+      translation technology, linguistic expertise, and project planning come together in
+      a structured localization workflow.
+    </p>
 
     <p>
       For this project, I localized the mobile game <em>Crayon Shin-chan: Little Helper</em>
@@ -279,7 +405,7 @@
       The project involved translating all user-facing content from English into
       <strong>Korean, French, and Traditional Chinese</strong>, using
       <strong>Trados Studio</strong> as the backbone of the technical and linguistic workflow.
-      From early preparation—file validation, segmentation rules, and translation memory setup—
+      From early preparation&mdash;file validation, segmentation rules, and translation memory setup&mdash;
       to production and final QA, each phase was designed to reduce risk, maintain consistency,
       and support high-quality multilingual output.
     </p>
@@ -289,13 +415,11 @@
       as well as the full Statement of Work and a summary of lessons learned.
     </p>
 
-    <!-- SOW PDF -->
     <h2>Statement of Work</h2>
     <div class="pdf-container">
       <iframe src="images/SM2 x Neos Corporation Localization Proposal.pdf" width="100%" height="100%"></iframe>
     </div>
 
-    <!-- PROCESS IMAGES -->
     <h2>Localization Process Highlights</h2>
 
     <div class="process-item">
@@ -305,7 +429,7 @@
 
     <div class="process-item">
       <img src="images/French Strings.png" alt="User-facing string translation">
-      <div class="caption">Translation of user-facing strings in Trados using TM matches, QA checks, and concordance search. LQA was conducted for all locales. </div>
+      <div class="caption">Translation of user-facing strings in Trados using TM matches, QA checks, and concordance search. LQA was conducted for all locales.</div>
     </div>
 
     <div class="process-item">
@@ -318,76 +442,74 @@
         DTP recreation of assets with embedded text across Korean, French, and Traditional Chinese.
       </div>
     </div>
-    
+
     <div class="process-item">
       <img src="images/glossary.png" alt="Localization glossary">
       <div class="caption">Project glossary ensuring consistent terminology across all languages.</div>
     </div>
 
+    <h2>Tips &amp; Tricks: Using Regex in Localization</h2>
 
+    <div class="regex-callout">
+      <h3>Using Regex to Improve Linguistic Quality at Scale</h3>
 
-    <h2>Tips & Tricks: Using Regex in Localization</h2>
+      <p>
+        One of the most valuable technical skills I applied during this project was the use of
+        <strong>regular expressions (regex)</strong> to perform targeted linguistic checks across
+        a large volume of user-facing strings. Regex allowed me to efficiently identify
+        inconsistencies that would be difficult to catch manually.
+      </p>
 
-<div class="regex-callout">
-  <h3>Using Regex to Improve Linguistic Quality at Scale</h3>
+      <p>
+        Below is a reference document showcasing how I have used regex in previous coursework
+        to solve localization challenges.
+      </p>
 
-  <p>
-    One of the most valuable technical skills I applied during this project was the use of
-    <strong>regular expressions (regex)</strong> to perform targeted linguistic checks across
-    a large volume of user-facing strings. Regex allowed me to efficiently identify
-    inconsistencies that would be difficult to catch manually.
-  </p>
+      <div class="pdf-container">
+        <iframe src="images/ShivaniBalachandar_Regex.pdf" width="100%" height="100%"></iframe>
+      </div>
 
-  <p>
-    Below is a reference document showcasing how I have used regex in previous coursework
-    to solve localization challenges.
-  </p>
+      <p>
+        In this project, regex was especially useful in my role as the <strong>French linguist</strong>,
+        where typographic conventions and register play a critical role in perceived quality.
+      </p>
 
-  <div class="pdf-container">
-    <iframe src="images/ShivaniBalachandar_Regex.pdf" width="100%" height="100%"></iframe>
-  </div>
+      <h4>Practical Regex Examples</h4>
 
-  <p>
-    In this project, regex was especially useful in my role as the <strong>French linguist</strong>,
-    where typographic conventions and register play a critical role in perceived quality.
-  </p>
+      <p><strong>1. Enforcing insecable (non-breaking) spaces before punctuation</strong></p>
+      <div class="regex-example">
+        ([^\s\u00A0])([!?])
+      </div>
+      <p>
+        Used to identify cases where <code>!</code> or <code>?</code> were missing the required
+        non-breaking space in French (e.g., <em>Bonjour!</em> &rarr; <em>Bonjour&nbsp;!</em>).
+      </p>
 
-  <h4>Practical Regex Examples</h4>
+      <p><strong>2. Checking for unintended informal phrasing</strong></p>
+      <div class="regex-example">
+        \b(tu|toi|ton|ta|tes)\b
+      </div>
+      <p>
+        Used to scan for informal second-person pronouns to ensure consistent use of
+        the intended register across instructional UI strings.
+      </p>
 
-  <p><strong>1. Enforcing insecable (non-breaking) spaces before punctuation</strong></p>
-  <div class="regex-example">
-    ([^\s\u00A0])([!?])
-  </div>
-  <p>
-    Used to identify cases where <code>!</code> or <code>?</code> were missing the required
-    non-breaking space in French (e.g., <em>Bonjour!</em> → <em>Bonjour&nbsp;!</em>).
-  </p>
+      <p><strong>3. Identifying inconsistent punctuation patterns</strong></p>
+      <div class="regex-example">
+        \s{2,}|[!?]{2,}
+      </div>
+      <p>
+        Used to flag double spaces or repeated punctuation that can easily slip into
+        short UI strings during editing.
+      </p>
 
-  <p><strong>2. Checking for unintended informal phrasing</strong></p>
-  <div class="regex-example">
-    \b(tu|toi|ton|ta|tes)\b
-  </div>
-  <p>
-    Used to scan for informal second-person pronouns to ensure consistent use of
-    the intended register across instructional UI strings.
-  </p>
-
-  <p><strong>3. Identifying inconsistent punctuation patterns</strong></p>
-  <div class="regex-example">
-    \s{2,}|[!?]{2,}
-  </div>
-  <p>
-    Used to flag double spaces or repeated punctuation that can easily slip into
-    short UI strings during editing.
-  </p>
-
-  <p>
-    By combining regex searches with Trados Studio’s QA Checker and concordance search,
-    I was able to validate French typographic rules, enforce stylistic consistency,
-    and significantly reduce review time. This reinforced how technical tools and
-    linguistic expertise work best when used together in a modern localization workflow.
-  </p>
-</div>
+      <p>
+        By combining regex searches with Trados Studio's QA Checker and concordance search,
+        I was able to validate French typographic rules, enforce stylistic consistency,
+        and significantly reduce review time. This reinforced how technical tools and
+        linguistic expertise work best when used together in a modern localization workflow.
+      </p>
+    </div>
 
   </div>
 </div>
