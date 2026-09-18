@@ -158,193 +158,7 @@
   &#8592; Back to Home
 </a>
 
-<!-- ===================== POST 1 ===================== -->
-<div class="post-header">
-  <h1>TMS Evaluation for Live-Service Game Localization</h1>
-  <h2>Crowdin vs Phrase for DalcomSoft</h2>
-  <p class="post-meta">By Shivani Balachandar &bull; May 2026</p>
-</div>
-
-<div class="post-content">
-
-  <p>
-    This post presents an enterprise-style evaluation of Translation Management Systems (TMS) for DalcomSoft,
-    a mobile game company known for rhythm-based K-pop titles with continuous live-service updates.
-  </p>
-
-  <p>
-    The objective was to simulate a real-world procurement decision by defining stakeholder requirements,
-    building a weighted scorecard, and comparing two leading TMS platforms: Crowdin and Phrase.
-  </p>
-
-  <div class="process-item">
-    <img class="post-img-small" src="images/tms_workflow_dalcomsoft.png" alt="Localization workflow for live-service games">
-    <div class="caption">End-to-end localization workflow: developer &rarr; TMS &rarr; translator &rarr; QA &rarr; live game updates.</div>
-  </div>
-
-  <p>
-    DalcomSoft's localization environment is fast-paced and continuous, requiring frequent updates for UI text,
-    events, notifications, and promotional content across multiple languages including Korean, English, Japanese, and Chinese.
-  </p>
-
-  <p>
-    Because of this, the most important evaluation factors were workflow automation, developer integration,
-    AI support, collaboration efficiency, and scalability for live-service content delivery.
-  </p>
-
-  <p>
-    A weighted scorecard was developed based on stakeholder needs including localization managers, translators,
-    developers, QA teams, marketing, executives, and end users.
-  </p>
-
-  <div class="process-item">
-    <img class="post-img-small" src="images/tms_scorecard.png" alt="TMS weighted scorecard comparison Crowdin vs Phrase">
-    <div class="caption">Weighted evaluation scorecard comparing Crowdin and Phrase across key business requirements.</div>
-  </div>
-
-  <p>
-    A short pilot simulation was conducted using representative game content such as event missions, UI strings,
-    push notifications, and store banners to test real-world usability and workflow efficiency.
-  </p>
-
-  <p>
-    Both Crowdin and Phrase performed strongly, but differences emerged in usability and workflow alignment.
-    Crowdin showed stronger performance in contextual translation, collaboration speed, and game-focused workflows,
-    while Phrase demonstrated stronger enterprise-level orchestration and scalability features.
-  </p>
-
-  <p>
-    Based on the weighted evaluation and pilot results, Crowdin was selected as the recommended TMS for DalcomSoft.
-    It provides the best balance of speed, usability, contextual localization support, and developer integration
-    required for a live-service mobile game environment.
-  </p>
-
-</div>
-
-<hr class="post-divider">
-
-<!-- ===================== POST 2 (NEW) ===================== -->
-<div class="post-header">
-  <h1>Training a Custom NMT Engine for K-pop Fan Discourse</h1>
-  <h2>Korean &rarr; English | Pann, Instiz, TheQoo</h2>
-  <p class="post-meta">By Shivani Balachandar &bull; April 2026</p>
-</div>
-
-<div class="post-content">
-
-  <p>
-    This project tackled one of the harder corners of machine translation: highly informal, slang-dense Korean
-    fan community text. Working as part of a four-person team (五夏 / 5SMR), we ran a pilot to estimate the
-    resources needed to train a customized Neural Machine Translation (NMT) engine for Korean-to-English
-    translation of forum-style K-pop content sourced from Pann, Instiz, and TheQoo.
-  </p>
-
-  <p>
-    We used <strong>Microsoft Azure Translator</strong> as our NMT engine and completed <strong>6 rounds of
-    training</strong> with human post-editing and evaluation after each round. The full workflow &mdash; from data
-    collection and cleaning through iterative training and final analysis &mdash; is documented in the Statement of
-    Work below.
-  </p>
-
-  <div class="process-item">
-    <img class="post-img-small" src="images/5smr_process.png" alt="5SMR NMT training process diagram">
-    <div class="caption">Four-phase workflow: file prep &rarr; MT training &rarr; assessment &rarr; delivery.</div>
-  </div>
-
-  <h2>The Challenge: Domain Mismatch</h2>
-
-  <p>
-    K-pop fan discourse on Korean internet forums is typologically distinct from the formal or semi-formal text
-    that most commercial MT systems train on. The corpus was dense with fandom-specific compound terms
-    (e.g., <em>&#52628;&#45355;</em> &ldquo;stan attractor,&rdquo; <em>&#49324;&#49373;</em> &ldquo;sasaeng&rdquo;), Korean emoticons like &#12619;&#12619; and &#12610;&#12610;
-    with no direct English equivalents, deliberate code-switching between Korean and romanized names, and
-    a register that swings rapidly between affectionate hyperbole, irony, and in-jokes.
-  </p>
-
-  <p>
-    Our baseline evaluation reflected this mismatch clearly. The MT output started at a <strong>critical</strong>
-    overall weighted score of 2.21/5.00, with post-editing effort scoring just 1.67 &mdash; meaning most segments
-    required near-complete rewriting rather than light editing.
-  </p>
-
-  <div class="callout-box">
-    <strong>Notable failure:</strong> The SEVENTEEN song title <em>&#50500;&#51452; NICE</em> (Aju Nice) was transcribed
-    by the baseline MT as an anatomical slur &mdash; a named entity hallucination that would be
-    actively harmful in any consumer-facing context, and a clear signal that the engine had never
-    encountered this content domain.
-  </div>
-
-  <h2>Iterative Training Results</h2>
-
-  <p>
-    Each round, we fed post-edited segments back into the training pipeline. The improvement was measurable
-    and consistent across all five iterations:
-  </p>
-
-  <table class="score-table">
-    <thead>
-      <tr>
-        <th>Iteration</th>
-        <th>Adequacy</th>
-        <th>Fluency</th>
-        <th>Tone Acc.</th>
-        <th>PE Effort</th>
-        <th>Weighted</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Baseline</td><td>2.94</td><td>2.54</td><td>2.17</td><td>1.67</td><td>2.21</td><td class="critical">CRITICAL</td></tr>
-      <tr><td>Round 1</td><td>3.31</td><td>2.91</td><td>2.44</td><td>2.21</td><td>2.69</td><td class="poor">POOR</td></tr>
-      <tr><td>Round 2</td><td>3.59</td><td>3.19</td><td>2.81</td><td>2.66</td><td>3.04</td><td class="accept">ACCEPTABLE</td></tr>
-      <tr><td>Round 3</td><td>3.79</td><td>3.39</td><td>3.09</td><td>3.03</td><td>3.31</td><td class="accept">ACCEPTABLE</td></tr>
-      <tr><td>Round 4</td><td>3.96</td><td>3.56</td><td>3.36</td><td>3.30</td><td>3.53</td><td class="accept">ACCEPTABLE</td></tr>
-      <tr><td>Round 5</td><td>4.06</td><td>3.66</td><td>3.56</td><td>3.50</td><td>3.69</td><td class="accept">ACCEPTABLE</td></tr>
-    </tbody>
-  </table>
-
-  <p>
-    The most dramatic gains came in the first two rounds, as the engine quickly absorbed corrected grammar
-    patterns, pronoun defaults, and basic slang handling. By Round 5, the majority of segments reached a
-    broad ACCEPTABLE&ndash;GOOD rating. Post-editing effort showed the steepest improvement over the full
-    cycle &mdash; validating the iterative PEMT strategy as a practical path forward for this domain.
-  </p>
-
-
-  <p>
-    We also completed only 6 of the 10 training rounds originally planned. Given that our content domain is
-    among the hardest for MT (informal, slang-heavy, emoticon-rich), more rounds would have meaningfully
-    pushed the scores further. Time management and unexpected setup friction with the Azure Translator Hub
-    were the main constraints.
-  </p>
-
-  <h2>Statement of Work</h2>
-
-  <p>
-    The Statement of Work captures the full project scope, updated timeline, and cost breakdown.
-  
-  </p>
-
-  <div class="pdf-container">
-    <iframe src="images/5SMR_SoW.pdf" width="100%" height="100%"></iframe>
-  </div>
-
-  <h2>Key Takeaways</h2>
-
-  <p>
-    This project reinforced something important: domain-specific NMT is viable, but it requires realistic
-    scoping of data prep costs. For informal internet content, data collection and cleaning will almost
-    always take longer than expected. A dedicated glossary for fan terminology, collected upfront, would
-    meaningfully accelerate both training and post-editing. And for a domain where register and emotional
-    tone are as important as meaning, human evaluation weighted toward tone accuracy is essential &mdash;
-    BLEU scores alone don&rsquo;t tell the full story.
-  </p>
-
-</div>
-
-<hr class="post-divider">
-
-<!-- ===================== POST 3 (original Crayon Shin-chan post, unchanged) ===================== -->
+<!-- ===================== POST 1 (moved to top): Crayon Shin-chan ===================== -->
 <div class="container">
 
   <div class="post-header">
@@ -508,6 +322,192 @@
 
   </div>
 </div>
+
+<hr class="post-divider">
+
+<!-- ===================== POST 2: K-pop NMT Engine ===================== -->
+<div class="post-header">
+  <h1>Training a Custom NMT Engine for K-pop Fan Discourse</h1>
+  <h2>Korean &rarr; English | Pann, Instiz, TheQoo</h2>
+  <p class="post-meta">By Shivani Balachandar &bull; April 2026</p>
+</div>
+
+<div class="post-content">
+
+  <p>
+    This project tackled one of the harder corners of machine translation: highly informal, slang-dense Korean
+    fan community text. Working as part of a four-person team (五夏 / 5SMR), we ran a pilot to estimate the
+    resources needed to train a customized Neural Machine Translation (NMT) engine for Korean-to-English
+    translation of forum-style K-pop content sourced from Pann, Instiz, and TheQoo.
+  </p>
+
+  <p>
+    We used <strong>Microsoft Azure Translator</strong> as our NMT engine and completed <strong>6 rounds of
+    training</strong> with human post-editing and evaluation after each round. The full workflow &mdash; from data
+    collection and cleaning through iterative training and final analysis &mdash; is documented in the Statement of
+    Work below.
+  </p>
+
+  <div class="process-item">
+    <img class="post-img-small" src="images/5smr_process.png" alt="5SMR NMT training process diagram">
+    <div class="caption">Four-phase workflow: file prep &rarr; MT training &rarr; assessment &rarr; delivery.</div>
+  </div>
+
+  <h2>The Challenge: Domain Mismatch</h2>
+
+  <p>
+    K-pop fan discourse on Korean internet forums is typologically distinct from the formal or semi-formal text
+    that most commercial MT systems train on. The corpus was dense with fandom-specific compound terms
+    (e.g., <em>&#52628;&#45355;</em> &ldquo;stan attractor,&rdquo; <em>&#49324;&#49373;</em> &ldquo;sasaeng&rdquo;), Korean emoticons like &#12619;&#12619; and &#12610;&#12610;
+    with no direct English equivalents, deliberate code-switching between Korean and romanized names, and
+    a register that swings rapidly between affectionate hyperbole, irony, and in-jokes.
+  </p>
+
+  <p>
+    Our baseline evaluation reflected this mismatch clearly. The MT output started at a <strong>critical</strong>
+    overall weighted score of 2.21/5.00, with post-editing effort scoring just 1.67 &mdash; meaning most segments
+    required near-complete rewriting rather than light editing.
+  </p>
+
+  <div class="callout-box">
+    <strong>Notable failure:</strong> The SEVENTEEN song title <em>&#50500;&#51452; NICE</em> (Aju Nice) was transcribed
+    by the baseline MT as an anatomical slur &mdash; a named entity hallucination that would be
+    actively harmful in any consumer-facing context, and a clear signal that the engine had never
+    encountered this content domain.
+  </div>
+
+  <h2>Iterative Training Results</h2>
+
+  <p>
+    Each round, we fed post-edited segments back into the training pipeline. The improvement was measurable
+    and consistent across all five iterations:
+  </p>
+
+  <table class="score-table">
+    <thead>
+      <tr>
+        <th>Iteration</th>
+        <th>Adequacy</th>
+        <th>Fluency</th>
+        <th>Tone Acc.</th>
+        <th>PE Effort</th>
+        <th>Weighted</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Baseline</td><td>2.94</td><td>2.54</td><td>2.17</td><td>1.67</td><td>2.21</td><td class="critical">CRITICAL</td></tr>
+      <tr><td>Round 1</td><td>3.31</td><td>2.91</td><td>2.44</td><td>2.21</td><td>2.69</td><td class="poor">POOR</td></tr>
+      <tr><td>Round 2</td><td>3.59</td><td>3.19</td><td>2.81</td><td>2.66</td><td>3.04</td><td class="accept">ACCEPTABLE</td></tr>
+      <tr><td>Round 3</td><td>3.79</td><td>3.39</td><td>3.09</td><td>3.03</td><td>3.31</td><td class="accept">ACCEPTABLE</td></tr>
+      <tr><td>Round 4</td><td>3.96</td><td>3.56</td><td>3.36</td><td>3.30</td><td>3.53</td><td class="accept">ACCEPTABLE</td></tr>
+      <tr><td>Round 5</td><td>4.06</td><td>3.66</td><td>3.56</td><td>3.50</td><td>3.69</td><td class="accept">ACCEPTABLE</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    The most dramatic gains came in the first two rounds, as the engine quickly absorbed corrected grammar
+    patterns, pronoun defaults, and basic slang handling. By Round 5, the majority of segments reached a
+    broad ACCEPTABLE&ndash;GOOD rating. Post-editing effort showed the steepest improvement over the full
+    cycle &mdash; validating the iterative PEMT strategy as a practical path forward for this domain.
+  </p>
+
+
+  <p>
+    We also completed only 6 of the 10 training rounds originally planned. Given that our content domain is
+    among the hardest for MT (informal, slang-heavy, emoticon-rich), more rounds would have meaningfully
+    pushed the scores further. Time management and unexpected setup friction with the Azure Translator Hub
+    were the main constraints.
+  </p>
+
+  <h2>Statement of Work</h2>
+
+  <p>
+    The Statement of Work captures the full project scope, updated timeline, and cost breakdown.
+  
+  </p>
+
+  <div class="pdf-container">
+    <iframe src="images/5SMR_SoW.pdf" width="100%" height="100%"></iframe>
+  </div>
+
+  <h2>Key Takeaways</h2>
+
+  <p>
+    This project reinforced something important: domain-specific NMT is viable, but it requires realistic
+    scoping of data prep costs. For informal internet content, data collection and cleaning will almost
+    always take longer than expected. A dedicated glossary for fan terminology, collected upfront, would
+    meaningfully accelerate both training and post-editing. And for a domain where register and emotional
+    tone are as important as meaning, human evaluation weighted toward tone accuracy is essential &mdash;
+    BLEU scores alone don&rsquo;t tell the full story.
+  </p>
+
+</div>
+
+<!-- ===================== POST 3: TMS Evaluation ===================== -->
+<div class="post-header">
+  <h1>TMS Evaluation for Live-Service Game Localization</h1>
+  <h2>Crowdin vs Phrase for DalcomSoft</h2>
+  <p class="post-meta">By Shivani Balachandar &bull; May 2026</p>
+</div>
+
+<div class="post-content">
+
+  <p>
+    This post presents an enterprise-style evaluation of Translation Management Systems (TMS) for DalcomSoft,
+    a mobile game company known for rhythm-based K-pop titles with continuous live-service updates.
+  </p>
+
+  <p>
+    The objective was to simulate a real-world procurement decision by defining stakeholder requirements,
+    building a weighted scorecard, and comparing two leading TMS platforms: Crowdin and Phrase.
+  </p>
+
+  <div class="process-item">
+    <img class="post-img-small" src="images/tms_workflow_dalcomsoft.png" alt="Localization workflow for live-service games">
+    <div class="caption">End-to-end localization workflow: developer &rarr; TMS &rarr; translator &rarr; QA &rarr; live game updates.</div>
+  </div>
+
+  <p>
+    DalcomSoft's localization environment is fast-paced and continuous, requiring frequent updates for UI text,
+    events, notifications, and promotional content across multiple languages including Korean, English, Japanese, and Chinese.
+  </p>
+
+  <p>
+    Because of this, the most important evaluation factors were workflow automation, developer integration,
+    AI support, collaboration efficiency, and scalability for live-service content delivery.
+  </p>
+
+  <p>
+    A weighted scorecard was developed based on stakeholder needs including localization managers, translators,
+    developers, QA teams, marketing, executives, and end users.
+  </p>
+
+  <div class="process-item">
+    <img class="post-img-small" src="images/tms_scorecard.png" alt="TMS weighted scorecard comparison Crowdin vs Phrase">
+    <div class="caption">Weighted evaluation scorecard comparing Crowdin and Phrase across key business requirements.</div>
+  </div>
+
+  <p>
+    A short pilot simulation was conducted using representative game content such as event missions, UI strings,
+    push notifications, and store banners to test real-world usability and workflow efficiency.
+  </p>
+
+  <p>
+    Both Crowdin and Phrase performed strongly, but differences emerged in usability and workflow alignment.
+    Crowdin showed stronger performance in contextual translation, collaboration speed, and game-focused workflows,
+    while Phrase demonstrated stronger enterprise-level orchestration and scalability features.
+  </p>
+
+  <p>
+    Based on the weighted evaluation and pilot results, Crowdin was selected as the recommended TMS for DalcomSoft.
+    It provides the best balance of speed, usability, contextual localization support, and developer integration
+    required for a live-service mobile game environment.
+  </p>
+
+</div>
+
+<hr class="post-divider">
 
 </body>
 </html>
